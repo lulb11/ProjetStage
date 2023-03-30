@@ -1,0 +1,19 @@
+* {
+  line-height: 1.8;
+  padding: 0;
+  margin: 0;
+}
+
+navbar {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.navBlock {
+  display: flex;
+}
+
+.navBtn {
+  padding: 35px;
+}
