@@ -7,7 +7,6 @@
 navbar {
   display: flex;
   justify-content: space-between;
-  font-weight: bold;
 }
 
 .navBlock {
@@ -16,4 +15,49 @@ navbar {
 
 .navBtn {
   padding: 35px;
+}
+
+.offerContainer {
+  display: flex;
+  margin-top: 50px;
+}
+
+.offer {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  padding: 30px;
+  gap: 25px;
+}
+
+.title {
+  font-size: 3em;
+  font-weight: bolder;
+}
+
+.subtitle {
+  font-size: large;
+}
+
+.offerBtn {
+  position: relative;
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  color: #fff;
+  border-radius: 10px;
+  background-color: rgb(245, 70, 99);
+  width: 250px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.draw {
+  display: flex;
+  justify-content: center;
+  width: 65%;
 }
