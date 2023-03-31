@@ -4,8 +4,12 @@
   margin: 0;
 }
 
-.container {
-  padding: 30px
+.padding15px {
+  padding: 15px
+}
+
+.margin30px {
+  margin: 30px;
 }
 
 navbar {
@@ -51,7 +55,7 @@ navbar {
   font-size: 1rem;
   color: #fff;
   border-radius: 10px;
-  background-color: rgb(245, 70, 99);
+  background-color: rgba(245, 70, 99, 0.719);
   width: 250px;
 }
 
@@ -74,4 +78,45 @@ footer {
 
 .colorGrey {
   color: grey;
+}
+
+
+#menu {
+  visibility: hidden;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+#menu.show {
+  visibility: visible;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  color: initial;
+}
+
+a:hover {
+  color: rgba(0, 0, 0, 0.623);
+}
+
+button#btnHamb {
+  outline: none;
+  border: none;
+  background-color: white;
+  border-radius: 60px / 40px;
+}
+
+button:hover.offerBtn {
+  background-color: rgb(245, 70, 99);
+}
+
+button:hover#btnHamb {
+  background-color: whitesmoke;
 }
