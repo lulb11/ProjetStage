@@ -11,21 +11,32 @@
 
 <body>
   <navbar class="container">
-    <div class="navBlock">
-      <button id="btnHamb" type="button">
-        <img src="suite.png" alt="menu hamburger" width="30px" height="30px" class="navBtn" />
-      </button>
+    <div class="paddingTopBot25px">
+      <a
+        href="https://www.amazon.fr/Temps-Temp%C3%AAtes-Nicolas-Sarkozy/dp/B08BWFVX53/ref=asc_df_B08BWFVX53/?tag=googshopfr-21&linkCode=df0&hvadid=411297414844&hvpos=&hvnetw=g&hvrand=7210843152870238207&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9109552&hvtargid=pla-930686471254&psc=1&tag=&ref=&adgrpid=97780288268&hvpone=&hvptwo=&hvadid=411297414844&hvpos=&hvnetw=g&hvrand=7210843152870238207&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9109552&hvtargid=pla-930686471254"><img
+          src="Marcocho.png" alt="nicolas sarkozy" height="70px" width="70px"></a>
     </div>
-    <div class="navBlock">
-      <div class="navBtn">Wordkouts & Programs</div>
-      <div class="navBtn">Nutrition Plans</div>
-      <div class="navBtn">Community</div>
+    <div id="navLinks">
+      <a class="paddingTopBot25px paddingLeftRight35px">Wordkouts & Programs</a>
+      <a class="paddingTopBot25px paddingLeftRight35px">Nutrition Plans</a>
+      <a class="paddingTopBot25px paddingLeftRight35px">Community</a>
     </div>
+    <button id="btnHamb" class="menu"
+      onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+      aria-label="Main Menu">
+      <svg width="80" height="80" viewBox="0 0 100 100">
+        <path class="line line1"
+          d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+        <path class="line line2" d="M 20,50 H 80" />
+        <path class="line line3"
+          d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+      </svg>
+    </button>
   </navbar>
   <div class="offerContainer container">
     <div class="offer">
       <h1 class="title">It's Time To Regain Your Fitness</h1>
-      <p class="fontSizeLarge colorGrey">
+      <p class="subtitle">
         Do fitness anywhere and anytime with our training videos
       </p>
       <button class="offerBtn" type="button">Try It For Free</button>
@@ -57,6 +68,7 @@
       <p class="colorGrey">A private community where we help each other</p>
     </div>
   </footer>
+  <script src="menuHamb.js"></script>
 </body>
 
 </html>
