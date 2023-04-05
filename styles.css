@@ -41,6 +41,7 @@ navbar {
     background-size: cover;
     transition: all 0.5s ease;
   }
+
   #btnHamb {
     display: block;
   }
@@ -62,6 +63,7 @@ a:visited {
 
 a:hover {
   color: rgba(0, 0, 0, 0.623);
+  cursor: pointer;
 }
 
 button#btnHamb {
@@ -72,6 +74,41 @@ button#btnHamb {
 button:hover.offerBtn {
   background-color: rgb(245, 70, 99);
   cursor: pointer;
+}
+
+button#btnCount {
+  font-size: 3.5rem;
+  cursor: pointer;
+  padding: .1em .6em;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  width: 250px;
+}
+
+button#btnCount {
+  --c: #229091;
+  box-shadow: 0 0 0 .1em inset var(--c);
+  --_g: linear-gradient(var(--c) 0 0) no-repeat;
+  background:
+    var(--_g) calc(var(--_p, 0%) - 100%) 0%,
+    var(--_g) calc(200% - var(--_p, 0%)) 0%,
+    var(--_g) calc(var(--_p, 0%) - 100%) 100%,
+    var(--_g) calc(200% - var(--_p, 0%)) 100%;
+  background-size: 50.5% calc(var(--_p, 0%)/2 + .5%);
+  outline-offset: .1em;
+  transition: background-size .4s, background-position 0s .4s;
+}
+
+button#btnCount:hover {
+  --_p: 100%;
+  transition: background-position .4s, background-size 0s;
+}
+
+button#btnCount:active {
+  box-shadow: 0 0 9e9q inset #0009;
+  background-color: var(--c);
+  color: #fff;
 }
 
 button:hover#btnHamb {
@@ -128,7 +165,9 @@ img {
 
 .draw {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 65%;
 }
 
@@ -151,30 +190,51 @@ footer {
   transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
     stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .line1 {
   stroke-dasharray: 60 207;
   stroke-width: 6;
 }
+
 .line2 {
   stroke-dasharray: 60 60;
   stroke-width: 6;
 }
+
 .line3 {
   stroke-dasharray: 60 207;
   stroke-width: 6;
 }
+
 .opened .line1 {
   stroke-dasharray: 90 207;
   stroke-dashoffset: -134;
   stroke-width: 6;
 }
+
 .opened .line2 {
   stroke-dasharray: 1 60;
   stroke-dashoffset: -30;
   stroke-width: 6;
 }
+
 .opened .line3 {
   stroke-dasharray: 90 207;
   stroke-dashoffset: -134;
   stroke-width: 6;
 }
+
+#imgCortex {
+}
+
+.mousemove {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  border: 2px solid;
+  border-color: rgba(0, 0, 0, 0.178);
+  border-radius: 50px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
